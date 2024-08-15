@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    int n;
+    printf("enter the n:");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        printf("enter the product number:");
+        scanf("%d",&arr[i]);
+    }
+    int subarray = 1;
+    int max=0;
+    for(int i=0;i<=n;i++){
+        int sum=0;
+        for(int j=0;j<subarray;j++){
+            sum = sum+arr[j];
+            }
+            if(max<sum){
+                max=sum;
+            }
+            subarray++;
+        }
+    
+  printf("%d",max);
+   
+}
